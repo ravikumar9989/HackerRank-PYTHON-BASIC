@@ -1,0 +1,19 @@
+n=int(input())
+d={}
+for i in range(n):
+    name=raw_input()
+    score=float(input())
+    d[name]=score
+marks=list(d.values())
+marks=list(set(marks))
+s=min(marks)
+marks.remove(s)
+s1=min(marks)
+sort_names=[]
+for i in d:
+    if(d[i]==s1):
+        sort_names.append(i)
+    
+sort_names.sort()
+for i in sort_names:
+    print(i)
